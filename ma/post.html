@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نشر محتوى</title>
+</head>
+<body>
+    <textarea id="content" rows="4" cols="50" placeholder="اكتب هنا..."></textarea>
+    <br>
+    <button onclick="postContent()"  style="margin-left: 150px;">نشر</button>
+
+    <script>
+        function postContent() {
+            var content = document.getElementById('content').value;
+            if (content) {
+                alert("تم نشر المحتوى: " + content);
+                // يمكنك إضافة كود هنا لنشر المحتوى إلى الخادم أو معالجته كما تريد
+            } else {
+                alert("الرجاء كتابة شيء للنشر.");
+            }
+        }
+    </script>
+</body>
+<script>
+    function postContent() {
+        var content = document.getElementById('content').value;
+        if (content) {
+            var password = prompt("الرجاء إدخال كلمة المرور:");
+            if (password === "ma123456789") {
+                alert("تم نشر المحتوى: " + content);
+                // يمكنك إضافة كود هنا لنشر المحتوى إلى الخادم أو معالجته كما تريد
+            } else {
+                alert("كلمة المرور غير صحيحة.");
+            }
+        } else {
+            alert("الرجاء كتابة شيء للنشر.");
+        }
+    }
+</script>
+</html>
